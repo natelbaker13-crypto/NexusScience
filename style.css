@@ -1,0 +1,37 @@
+/* Step 2a: Reset margins so the background covers everything */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Keeps the screen from scrolling */
+}
+
+/* Step 2b: Create the Blue -> Purple -> Light Blue Gradient background */
+body {
+    background: linear-gradient(135deg, 
+        #004e92, /* Dark Blue */
+        #c636f1, /* Purple */
+        #00d4ff  /* Light Blue */
+    );
+    background-size: 200% 200%; /* Makes the gradient smoother */
+}
+
+/* Step 2c: Center everything on the screen */
+.hero-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;    /* Vertically center */
+    height: 100vh;          /* Use full viewport height */
+}
+
+/* Step 2d: Style the "Nexus Hub" title */
+.game-title {
+    /* Use the 'Press Start 2P' font we pulled in the index.html */
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 4rem; /* Big, 'gamey' size */
+    color: white; /* Make the text pop */
+    text-transform: uppercase;
+    
+    /* Adds a retro 'shadow' effect for more depth */
+    text-shadow: 4px 4px 0px #000; 
+}
